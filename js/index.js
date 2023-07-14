@@ -7,13 +7,13 @@ const valorCerveza = 350;
 // Proceso Inicial
 
 alert ("Bienvenido a Maxikiosco FC");
-let validacionsocio = prompt("Tiene cuenta creada? \nIngrese 'si' o 'no'");
+let validacionsocio = prompt("Tiene cuenta creada? \nIngrese 'Si' o 'No'");
 
 const usuario = prompt("Ingrese su usuario");
 const dniCuit = prompt("Ingrese su dni/cuit");
 
 // Uso del while
-while (validacionsocio != "si") {
+while (validacionsocio != "Si") {
     console.log ("No Socio, beneficio de fidelización del 20% en el primer pedido.");
     alert("No sos socio? Registrándote te hacemos un 20% de descuento en tu primer pedido.");
     break;
@@ -47,7 +47,7 @@ const cantidadCerveza = parseInt(prompt("Cuantas cervezas desea comprar? (Precio
 const pedidoCerveza = parseInt (cantidadCerveza * valorCerveza);
 console.log ("Cerveza: " + cantidadCerveza + " a $" +(cantidadCerveza * valorCerveza));
 
-// Detallo el pedido
+// Detallo el pedido total|
 alert ("El detalle de su pedido es: \nGalletitas: " + cantidadGalletitas + "\nAlfajores: " + cantidadAlfajores + "\nAgua: " + cantidadAgua + "\nCerveza: " + cantidadCerveza);
 
 // Suma del pedido
@@ -79,7 +79,7 @@ let valorEntrega = 0
             alert("El valor de su pedido con la entrega elegida es de: $" + valorEntrega);
             break;              
         default:
-            alert("Opcion invalida");
+            alert("Opción incorrecta");
             break;
      } 
      console.log ("Valor total con entrega en zona " + barrioEntrega + " es de: $" + valorEntrega)
@@ -88,7 +88,7 @@ let valorEntrega = 0
 
 let valortotal = 0
 function socio(){
-    if(validacionsocio == 'si'){
+    if(validacionsocio == 'Si'){
         console.log("Por ser socio aplicar descuento del 10%")
         const descuento = valorEntrega * 0.1;
         valortotal = valorEntrega - descuento;
@@ -103,3 +103,4 @@ socio();
 alert ("Gracias por comprar con nosotros. \nTu pedido por $" + (valortotal+ " sera despachado cuanto antes."))
 console.log ("Pedido para: " + usuario + " - Facturacion: " + dniCuit)
 console.log ("A despachar a zona " + barrioEntrega +" por valor total de " + valortotal)
+
